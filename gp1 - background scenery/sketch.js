@@ -18,7 +18,6 @@ function draw()
 	ellipse(170, 169, 55, 45);
 	ellipse(205, 174, 70, 50);
 	ellipse(240, 169, 55, 45);
-	
 	// Cloud main body
 	fill(255);
 	ellipse(160, 160, 55, 50);
@@ -47,7 +46,6 @@ function draw()
 	quad(912, 320, 935, 320, 930, 432, 907, 432);
 	fill(110, 90, 35);
 	quad(929, 320, 948, 320, 952, 432, 922, 432);
-	
 	// Tree leaves
 	fill(0, 140, 40);
 	ellipse(900, 310, 70, 60);
@@ -77,15 +75,12 @@ function draw()
 
 	// Bone collectable
 	fill(250, 245, 230);
-	
 	// Bone start
 	ellipse(394, 397, 12, 9);
 	ellipse(394, 403, 12, 9);
-	
 	// Bone end
 	ellipse(420, 397, 12, 9);
 	ellipse(420, 403, 12, 9);
-	
 	// Bone middle
 	fill(255, 250, 240);
 	rect(396, 398, 28, 5);
