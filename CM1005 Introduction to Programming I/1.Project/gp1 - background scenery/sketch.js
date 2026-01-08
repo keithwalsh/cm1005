@@ -34,51 +34,51 @@ function draw()
 	*/
 	// Back mountain
 	fill(130, 200, 150);
-	triangle(250, 432, 480, 220, 650, 432);
+	triangle(210, 432, 486, 177.6, 690, 432);
 	// Back mountain - snow cap with zig-zag edge
 	fill(255);
 	beginShape();
-	vertex(480, 220);   // peak of mountain
-	vertex(437, 260);   // left side down
-	vertex(455, 250);   // zig up
-	vertex(462, 265);   // zag down
-	vertex(470, 252);   // zig up
-	vertex(485, 265);   // zag down
-	vertex(493, 256);   // zig up
-	vertex(516, 265);   // zag down
-	vertex(516, 265);   // right side
+	vertex(486, 177.6);   // peak of mountain
+	vertex(434.4, 225.6);   // left side down
+	vertex(456, 213.6);   // zig up
+	vertex(464.4, 231.6);   // zag down
+	vertex(474, 216);   // zig up
+	vertex(492, 231.6);   // zag down
+	vertex(501.6, 220.8);   // zig up
+	vertex(529.2, 231.6);   // zag down
+	vertex(529.2, 231.6);   // right side
 	endShape(CLOSE);
 	// Middle mountain
 	fill(90, 180, 120);
-	triangle(350, 432, 480, 260, 600, 432);
+	triangle(325, 432, 481, 225.6, 625, 432);
 	// Middle mountain - snow cap with zig-zag edge
-	fill(245);
+	fill(247);
 	beginShape();
-	vertex(480, 260);   // peak of mountain
-	vertex(457, 290);   // left side down
-	vertex(470, 283);   // zig up
-	vertex(473, 290);   // zag down
-	vertex(479, 283);   // zig up
-	vertex(485, 290);   // zag down
-	vertex(487, 280);   // zig up
-	vertex(501, 290);   // zag down
-	vertex(501, 290);   // right side
+	vertex(481, 225.6);   // peak of mountain
+	vertex(453.4, 261.6);   // left side down
+	vertex(469, 253.2);   // zig up
+	vertex(472.6, 261.6);   // zag down
+	vertex(479.8, 253.2);   // zig up
+	vertex(487, 261.6);   // zag down
+	vertex(489.4, 249.6);   // zig up
+	vertex(506.2, 261.6);   // zag down
+	vertex(506.2, 261.6);   // right side
 	endShape(CLOSE);
 	// Front mountain
 	fill(60, 160, 100);
-	triangle(250, 432, 420, 300, 560, 432);
+	triangle(219, 432, 423, 273.6, 591, 432);
 	// Front mountain - snow cap with zig-zag edge
-	fill(235);
+	fill(230);
 	beginShape();
-	vertex(420, 300);   // peak of mountain
-	vertex(390.5, 323);   // left side down
-	vertex(410, 315);   // zig up
-	vertex(410, 322);   // zag down
-	vertex(418, 316);   // zig up
-	vertex(424, 323);   // zag down
-	vertex(429, 318);   // zig up
-	vertex(443, 322);   // zag down
-	vertex(443, 322);   // right side
+	vertex(423, 273.6);   // peak of mountain
+	vertex(380.4, 307.2);   // left side down
+	vertex(408.6, 294);   // zig up
+	vertex(411, 309.6);   // zag down
+	vertex(423, 295.2);   // zig up
+	vertex(427.8, 303.6);   // zag down
+	vertex(433.8, 296.4);   // zig up
+	vertex(450.6, 300);   // zag down
+	vertex(450.6, 300);   // right side
 	endShape(CLOSE);
 
 	/*
