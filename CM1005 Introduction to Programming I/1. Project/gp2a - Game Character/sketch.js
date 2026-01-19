@@ -87,6 +87,7 @@ function draw()
 	fill(210, 170, 120);
 	ellipse(gameChar_x + 0, gameChar_y - 35, 11, 9);
 	// Tongue
+	strokeWeight(1);
 	fill(255, 100, 100);
 	push();
 	translate(gameChar_x - 0.5, gameChar_y - 32);
@@ -123,62 +124,77 @@ function draw()
 	
 	// Ears (perked up for jump)
 	fill(120, 80, 40);
-	ellipse(gameChar_x + 18.5, gameChar_y - 51, 6, 12);
-	ellipse(gameChar_x + 1.5, gameChar_y - 51, 6, 12);
+	ellipse(gameChar_x + 8.5, gameChar_y - 55, 6, 12);
+	ellipse(gameChar_x + -8.5, gameChar_y - 55, 6, 12);
 	// Back Legs (spread outward diagonally)
 	fill(140, 90, 40);
 	push();
-	translate(gameChar_x - 16, gameChar_y - 21);
+	translate(gameChar_x - 16, gameChar_y - 5);
 	rotate(radians(-35));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	push();
-	translate(gameChar_x + 9, gameChar_y - 23);
+	translate(gameChar_x + 9, gameChar_y - 5);
 	rotate(radians(35));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	// Body
 	fill(180, 130, 70);
-	ellipse(gameChar_x - 0, gameChar_y - 21, 38, 20);
+	ellipse(gameChar_x - 0, gameChar_y - 23.25, 26, 30);
+	strokeWeight(1);
 	// Tail
-	fill(120, 80, 40);
-	ellipse(gameChar_x - 18, gameChar_y - 38, 6, 14);
+	stroke(120, 80, 40);
+	strokeWeight(3);
+	noFill();
+	bezier(
+		gameChar_x + 0, gameChar_y - 9,
+		gameChar_x - 14, gameChar_y - 6,
+		gameChar_x - 19, gameChar_y - 21,
+		gameChar_x - 16, gameChar_y - 23
+	);
+	noStroke();
 	// Head
 	fill(180, 130, 70);
-	ellipse(gameChar_x + 0, gameChar_y - 42, 17, 18);
+	ellipse(gameChar_x + 0, gameChar_y - 46, 17, 18);
 	// Front Legs
 	fill(180, 130, 70);
 	push();
-	translate(gameChar_x - 10, gameChar_y - 19);
+	translate(gameChar_x - 10, gameChar_y - 5);
 	rotate(radians(-30));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	push();
-	translate(gameChar_x + 11, gameChar_y - 23);
+	translate(gameChar_x + 11, gameChar_y - 5);
 	rotate(radians(30));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	// Snout
 	fill(210, 170, 120);
-	ellipse(gameChar_x + 0, gameChar_y - 38.5, 11, 9);
+	ellipse(gameChar_x + 0, gameChar_y - 42.5, 11, 9);
 	// Nose
 	fill(0);
-	ellipse(gameChar_x + 0, gameChar_y - 39, 3.5, 3);
-	// line between nose and mouth
-	stroke(80, 50, 30);
-	line(gameChar_x + 10.5, gameChar_y - 37.5, gameChar_x + 10.5, gameChar_y - 35.5);
+	ellipse(gameChar_x + 0, gameChar_y - 43.5, 3.5, 3);
+	// Tongue
+	fill(255, 100, 100);
+	push();
+	translate(gameChar_x - 0.5, gameChar_y - 39.25);
+	rotate(radians(30));
+	ellipse(0, 0, 1.5, 2);
+	pop();
 	// Mouth
+	strokeWeight(1);
 	stroke(80, 50, 30);
 	noFill();
-	arc(gameChar_x + 10.5, gameChar_y - 37.5, 5, 4, 0, PI);
+	line(gameChar_x + 0, gameChar_y - 41.75, gameChar_x + 0, gameChar_y - 41.25);
+	arc(gameChar_x + 0, gameChar_y - 41.25, 5, 2, 0, PI);
 	noStroke();
 	// Eye
 	fill(0);
-	ellipse(gameChar_x + 3.5, gameChar_y - 44, 3, 3);
-	ellipse(gameChar_x - 3.5, gameChar_y - 44, 3, 3);
+	ellipse(gameChar_x + 3.5, gameChar_y - 48, 3, 3);
+	ellipse(gameChar_x - 3.5, gameChar_y - 48, 3, 3);
 	fill(250, 213, 184);
-	ellipse(gameChar_x + 3.8, gameChar_y - 44.7, 0.9, 0.9);
-	ellipse(gameChar_x - 3.3, gameChar_y - 44.7, 0.9, 0.9);
+	ellipse(gameChar_x + 3.8, gameChar_y - 48.7, 0.9, 0.9);
+	ellipse(gameChar_x - 3.3, gameChar_y - 48.7, 0.9, 0.9);
 
 
 	//Walking, turned left
