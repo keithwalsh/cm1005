@@ -67,7 +67,7 @@ function draw()
 	// Front Legs
 	fill(180, 130, 70);
 	stroke(0);
-	strokeWeight(0.6);
+	strokeWeight(0.3);
 	rect(gameChar_x - 9, gameChar_y - 15, 5, 18, 5);
 	rect(gameChar_x + 4, gameChar_y - 15, 5, 18, 2);
 	noStroke();
@@ -122,50 +122,67 @@ function draw()
 	gameChar_x = 245;
 	gameChar_y = 137;
 	
-	// Ears (perked up for jump)
+	// Ears
 	fill(120, 80, 40);
-	ellipse(gameChar_x + 8.5, gameChar_y - 55, 6, 12);
-	ellipse(gameChar_x + -8.5, gameChar_y - 55, 6, 12);
-	// Back Legs (spread outward diagonally)
+	ellipse(gameChar_x + 8.4, gameChar_y - 55, 6, 12);
+	ellipse(gameChar_x + -8.3, gameChar_y - 55, 6, 12);
+	// Back Legs
 	fill(140, 90, 40);
 	push();
-	translate(gameChar_x - 16, gameChar_y - 5);
-	rotate(radians(-35));
+	translate(gameChar_x + 6.5, gameChar_y - 14);
+	rotate(radians(21));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	push();
-	translate(gameChar_x + 9, gameChar_y - 5);
-	rotate(radians(35));
+	translate(gameChar_x - 11, gameChar_y -12);
+	rotate(radians(-25));
 	rect(0, 0, 5, 11, 2);
 	pop();
-	// Body
-	fill(180, 130, 70);
-	ellipse(gameChar_x - 0, gameChar_y - 23.25, 26, 30);
-	strokeWeight(1);
 	// Tail
 	stroke(120, 80, 40);
 	strokeWeight(3);
 	noFill();
 	bezier(
-		gameChar_x + 0, gameChar_y - 9,
-		gameChar_x - 14, gameChar_y - 6,
-		gameChar_x - 19, gameChar_y - 21,
-		gameChar_x - 16, gameChar_y - 23
+		gameChar_x + 0, gameChar_y - 16.25,
+		gameChar_x - 14, gameChar_y - 14.25,
+		gameChar_x - 16, gameChar_y - 24.25,
+		gameChar_x - 21, gameChar_y - 21.25
 	);
 	noStroke();
+	// Body
+	fill(180, 130, 70);
+	ellipse(gameChar_x - 0, gameChar_y - 23.25, 24, 31);
+	strokeWeight(1);
 	// Head
 	fill(180, 130, 70);
 	ellipse(gameChar_x + 0, gameChar_y - 46, 17, 18);
 	// Front Legs
 	fill(180, 130, 70);
+	stroke(0);
+	strokeWeight(0.4);
 	push();
-	translate(gameChar_x - 10, gameChar_y - 5);
-	rotate(radians(-30));
-	rect(0, 0, 5, 11, 2);
+	translate(gameChar_x - 9.5, gameChar_y - 35);
+	rotate(degrees(-30));
+	rect(-2.5, -9, 5, 18, 5);
 	pop();
 	push();
-	translate(gameChar_x + 11, gameChar_y - 5);
-	rotate(radians(30));
+	translate(gameChar_x + 9, gameChar_y - 35);
+	rotate(degrees(30));
+	rect(-2.5, -9, 5, 18, 2);
+	pop();
+	noStroke();
+	strokeWeight(1);
+	fill(180, 130, 70)
+	push();
+	translate(gameChar_x - 4, gameChar_y - 33);
+	rotate(radians(45));
+	rect(0, 0, 5, 11, 2);
+	pop();
+	strokeWeight(1);
+	fill(180, 130, 70)
+	push();
+	translate(gameChar_x - 1, gameChar_y - 31);
+	rotate(radians(-45));
 	rect(0, 0, 5, 11, 2);
 	pop();
 	// Snout
@@ -175,12 +192,14 @@ function draw()
 	fill(0);
 	ellipse(gameChar_x + 0, gameChar_y - 43.5, 3.5, 3);
 	// Tongue
+	stroke(0); // black outline
+	strokeWeight(0.2);
 	fill(255, 100, 100);
 	push();
-	translate(gameChar_x - 0.5, gameChar_y - 39.25);
-	rotate(radians(30));
-	ellipse(0, 0, 1.5, 2);
+	translate(gameChar_x + 0, gameChar_y - 39);
+	ellipse(0, 0, 3, 3.5);
 	pop();
+	noStroke();
 	// Mouth
 	strokeWeight(1);
 	stroke(80, 50, 30);
@@ -193,8 +212,8 @@ function draw()
 	ellipse(gameChar_x + 3.5, gameChar_y - 48, 3, 3);
 	ellipse(gameChar_x - 3.5, gameChar_y - 48, 3, 3);
 	fill(250, 213, 184);
-	ellipse(gameChar_x + 3.8, gameChar_y - 48.7, 0.9, 0.9);
-	ellipse(gameChar_x - 3.3, gameChar_y - 48.7, 0.9, 0.9);
+	ellipse(gameChar_x + 3.6, gameChar_y - 48.7, 1.1, 1.1);
+	ellipse(gameChar_x - 3.5, gameChar_y - 48.7, 1.1, 1.1);
 
 
 	//Walking, turned left
@@ -269,9 +288,6 @@ function draw()
 	gameChar_x = 245;
 	gameChar_y = 337;
 
-	// Right Ear
-	fill(120, 80, 40);
-	ellipse(gameChar_x + 17, gameChar_y - 36, 6, 11);
 	// Back Legs
 	fill(140, 90, 40);
 	push();
@@ -307,7 +323,12 @@ function draw()
 	pop();
 	// Left Ear
 	fill(120, 80, 40);
-	ellipse(gameChar_x + 3, gameChar_y - 36, 6, 11);
+	push();
+	translate(gameChar_x + 4, gameChar_y - 31);
+	rotate(radians(36));
+	ellipse(0, 0, 5, 11);
+	pop();
+	push();
 	// Snout
 	fill(210, 170, 120);
 	ellipse(gameChar_x + 16, gameChar_y - 26, 9, 7);
@@ -317,6 +338,8 @@ function draw()
 	// Eye
 	fill(0);
 	ellipse(gameChar_x + 12, gameChar_y - 31, 3, 3);
+	fill(250, 213, 184);
+	ellipse(gameChar_x + 12, gameChar_y - 31, 0.9, 0.9);
 
 
 	//Jumping right
